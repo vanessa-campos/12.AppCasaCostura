@@ -55,10 +55,19 @@ public class Menu : MonoBehaviour
     }
     public void ButtonProduto(){        
         panelMenu.SetActive(false);
-        panelProduto.SetActive(true);
+        panelProduto.SetActive(true);        
+        CadastroProduto cadastroProduto = panelProduto.GetComponent<CadastroProduto>();
+        cadastroProduto.categoria.value = 0;
+        cadastroProduto.nome.text = "";
+        cadastroProduto.descricao.text = "";
+        cadastroProduto.tamanho.text = "";
+        cadastroProduto.valor.text = "";
+        cadastroProduto.unidade.value = 0;
+        cadastroProduto.quantidade.text = "";
     }
     public void ButtonListaProdutos(){
         panelMenu.SetActive(false);
+        panelProduto.SetActive(false);
         panelListaProdutos.SetActive(true);
         Screen.orientation = ScreenOrientation.Landscape;
         foreach (var item in produtos){
