@@ -41,6 +41,10 @@ public class Menu : MonoBehaviour
     public void ButtonVender(){
         panelMenu.SetActive(false);
         panelVender.SetActive(true);
+        CadastroVenda cadastroVenda = panelVender.GetComponent<CadastroVenda>();
+        cadastroVenda.categoria.value = 0;
+        cadastroVenda.nome.value = 0;
+        cadastroVenda.quantidade.text = "";
     }
     public void ButtonCosturar(){
         panelMenu.SetActive(false);
@@ -76,6 +80,7 @@ public class Menu : MonoBehaviour
     }
     public void ButtonListaVendas(){
         panelMenu.SetActive(false);
+        panelVender.SetActive(false);
         panelListaVendas.SetActive(true);    
         Screen.orientation = ScreenOrientation.Landscape;   
         foreach (var item in vendas){

@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Venda : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{    
+    public int Id;
+    public TMP_Text id, nome, descricao, tamanho, valor, quantidade, valorTotal, data;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
